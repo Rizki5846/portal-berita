@@ -15,8 +15,14 @@ use Inertia\Inertia;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/', function () {
+    return Inertia::render('Homepage',[
+        'title' => 'cuy news',
+        'description' => 'selamat datang'
+    ]);
+     
+});
+Route::get('/welcome', function () {
     return Inertia::render('Welcome', [
         'canLogin' => Route::has('login'),
         'canRegister' => Route::has('register'),
