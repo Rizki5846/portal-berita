@@ -32,9 +32,6 @@ const noNews = () =>{
 
 const NewsList = ({ news }) => {
    return !news ? noNews() : isNews(news)
-   
-    
-    
 }
 
 export default NewsList;
